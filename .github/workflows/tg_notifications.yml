@@ -12,4 +12,5 @@ jobs:
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -F chat_id=${{ secrets.WEB_GROUP }} -F text='
            Оу май это Релиз! Версия: ${{ github.event.release.name }}
            Что было добавлено/изменено:
+           https://github.com/CITG-Space-Pet/web_lab_aib_frontend
            ${{ github.event.release.body }}'
