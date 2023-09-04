@@ -1,0 +1,16 @@
+name: release
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  telegram_notification:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: send changelog to telegram channel
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -F chat_id=${{ secrets.WEB_GROUP }} -F text='
+           Оу май это Релиз! Версия: ${{ github.event.release.name }}
+           Что было добавлено/изменено:
+           ${{ github.event.release.body }}'
