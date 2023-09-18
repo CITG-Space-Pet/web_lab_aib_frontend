@@ -109,3 +109,5 @@ X-Frame-Options: SAMEORIGIN
 - расшифровку всех данных в заголовке ответа
 
 [**Статья в помощь**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+
+[**Статья в помощь №2**](https://runebook.dev/ru/docs/http/-index-#Headers)
