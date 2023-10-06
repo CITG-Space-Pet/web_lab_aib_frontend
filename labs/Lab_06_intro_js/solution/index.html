@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    //Задача 1
+    const apple = 10
+
+    alert(apple)
+    console.log(apple)
+
+    const condition = 'first'
+    console.log('Good game is ' + condition)
+
+
+    //Задача 2
+    const num = 5
+    const string = '100'
+    const bool = true
+
+    console.log(num + string)
+    console.log(num + bool)
+    console.log(string + num)
+    console.log(string + bool)
+    console.log(bool + num)
+    console.log(bool + string)
+
+
+    // Задача 3
+    const array = []
+    for (let i = 0; i < 10; i++) {
+      let numAdd = Math.floor(Math.random() * 20) - 10
+      array.push(numAdd)
+    }
+
+    const filterArr = array.filter((item) => {
+      return item > 0
+    })
+
+    console.log(`Исходный массив: ${array}\nОтфильтрованный массив: ${filterArr}`)
+
+
+    //Задача 4
+
+    //Задача 4.1
+    const randomNum = (max, min) => {
+      return Math.floor(Math.random() * max - min + 1)
+    }
+
+    const random = randomNum(10, 5)
+    console.log(random)
+
+    //Задача 4.2
+    const array = [1, 2, 3, 4, 5]
+    const multNum = 5
+
+    const multArray = (arr, num) => {
+      const res = arr.map((item) => {
+        return item * num
+      })
+      return res
+    }
+    console.log(multArray(array, multNum))
+
+
+    //Задача 4.3
+    const generateWord = () => {
+      const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+      const wordLength = Math.floor(Math.random() * 7) + 1 
+      let randomWord = ''
+
+      for (let i = 0; i < wordLength; i++) {
+        const randomIndex = Math.floor(Math.random() * alphabet.length)
+        randomWord += alphabet.charAt(randomIndex) // Добавляем случайный символ к слову
+      }
+      return randomWord
+    }
+    console.log(generateWord())
+
+
+    //Задача 5.1
+    const obj = {}
+
+    obj.firstName = 'Евгений'
+    obj.surname = 'Морозов'
+    obj.patronymic = 'Юрьевич'
+    obj.birthday = 2003
+    obj.hobby = 'какое-то хобби'
+    obj.group = 'АИБ-3-043'
+
+
+    const FIO = () => {
+      return `${obj.surname} ${obj.firstName} ${obj.patronymic}`
+    }
+
+    const getFullInfo = () => {
+      const fullname = FIO('surname', 'firstName', 'patronymic')
+      const birthYear = obj.birthday
+      const personHobby = obj.hobby
+      const currentDate = new Date()
+      const currentYear = currentDate.getFullYear()
+      age = currentYear - birthYear
+      return `ФИО: ${fullname}, \nГод рождения: ${birthYear}, \nХобби: ${personHobby},\nВозраст: ${age}`
+      // console.log(year)
+    }
+
+    alert(getFullInfo())
+
+
+    //Задача 5.2
+    const salaryStaff = {
+      'Иванов': 50000,
+      'Петров': 60000,
+      'Сидоров': 55000,
+      'Козлов': 70000,
+      'Смирнов': 48000,
+      'Морозов': 52000,
+      'Никитин': 58000,
+      'Васильев': 63000,
+      'Павлов': 55000,
+      'Федоров': 59000,
+    }
+
+    let sumSalary = 0
+
+    for (const value in salaryStaff) {
+      sumSalary += salaryStaff[value]
+    }
+    console.log(sumSalary)
+
+  </script>
+</body>
+</html>
