@@ -24,6 +24,8 @@ let someVariable
 const someVariable = 10
 ```
 
+[**Справочник о переменных и закрепление знаний практическими заданиями**](https://learn.javascript.ru/variables)
+
 ## Циклы и условия
 
 Если Вы знакомы с C++, то Вам будет знаком синтаксис JS.  
@@ -80,6 +82,7 @@ if (myBall > 10) {
     console.log('hahahaha')
 }
 ```
+[**Циклы и условия подробно;)**](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 ## Функции
 
@@ -111,6 +114,8 @@ const randomInteger = (min, max) => {
 
 Вызов такой функции происходит так же как и с обычной функцией: `randomInteger(10, 100)`
 
+[**Справочник о функциях и закрепление знаний практическими заданиями:)**](https://learn.javascript.ru/function-basics)
+
 ## Объекты
 
 Для создания пустого объекта можно использовать оператор `new Object()` или `{}`  
@@ -128,3 +133,5 @@ let exampleObject = {
 }
 console.log(exampleObject.salary());
 ```
+
+[**Статья о объектах и прикольные практические задания;)**](https://learn.javascript.ru/object)
