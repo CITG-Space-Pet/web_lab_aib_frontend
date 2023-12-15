@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box {
+ display: inline-block;
+ width: 200px;
+ height: 200px;
+ margin: 10px;
+}
+
+#red {
+ background-color: red;
+}
+
+#green {
+ background-color: green;
+}
+
+#blue {
+ background-color: blue;
+}
+
+.palette {
+ margin-top: 50px;
+}
+</style>
+<script>
+ function saveColor(color) {
+    localStorage.setItem('selectedColor', color);
+ }
+
+ function loadColor() {
+    var selectedColor = localStorage.getItem('selectedColor');
+    if (selectedColor) {
+      var blocks = document.getElementsByClassName('box');
+      for (var i = 0; i < blocks.length; i++) {
+        blocks[i].style.backgroundColor = selectedColor;
+      }
+    }
+ }
+
+ window.onload = loadColor;
+</script>
+</head>
+<body>
+
+<div class="box" id="red" onclick="saveColor(this.style.backgroundColor)"></div>
+<div class="box" id="green" onclick="saveColor(this.style.backgroundColor)"></div>
+<div class="box" id="blue" onclick="saveColor(this.style.backgroundColor)"></div>
+
+<div class="palette">
+ <div class="box" id="yellow" onclick="saveColor(this.style.backgroundColor)"></div>
+ <div class="box" id="cyan" onclick="saveColor(this.style.backgroundColor)"></div>
+ <div class="box" id="magenta" onclick="saveColor(this.style.backgroundColor)"></div>
+</div>
+
+</body>
+</html>
