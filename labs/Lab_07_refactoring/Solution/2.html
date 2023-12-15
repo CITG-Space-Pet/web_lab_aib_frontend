@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+var f = new Array('apple', 'strawberry', 'blueberry', 'raspberry', 'lemon');
+var colors = {
+  'apple': 'apple green',
+  'strawberry': 'strawberry red',
+  'blueberry': 'blueberry blue',
+  'raspberry': 'raspberry light red',
+  'lemon': 'lemon yellow'
+};
+
+for (var i = 0; i < f.length; i++) {
+  console.log(f[i]);
+  
+  if (colors.hasOwnProperty(f[i])) {
+    console.log(colors[f[i]]);
+  }
+}
+</script>
+</body>
+</html>

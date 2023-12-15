@@ -1,3 +1,4 @@
+
 # Рефакторинг кода 
 ___________________________________________________
 ## Лабораторная работа 7
@@ -14,7 +15,18 @@ if (a === _) console.log('equally')
 else console.log('equally');
 var b = 'world'; var a = a + b;
 ```
-
+Отрефакторенный код
+```js
+var a = prompt('Введите первую переменную');
+var b = prompt('Введите вторую переменную');
+if (a === b) {
+console.log('Переменные равны');
+} else {
+console.log('Переменные не равны');
+}
+var c = 'world';
+var result = a + c;
+```
 ### Задание №2. level iron
 
 Скрипт выводит названия фруктов, а затем отображает название фрукта и его цвет
@@ -52,6 +64,25 @@ if (f[4] === 'blueberry') console.log('blueberry blue')
 if (f[4] === 'raspberry') console.log('raspberry light red')
 if (f[4] === 'lemon') console.log('lemon yellow')
 ```
+Отрефакторенный код
+```js
+var f = new Array('apple', 'strawberry', 'blueberry', 'raspberry', 'lemon');
+var colors = {
+  'apple': 'apple green',
+  'strawberry': 'strawberry red',
+  'blueberry': 'blueberry blue',
+  'raspberry': 'raspberry light red',
+  'lemon': 'lemon yellow'
+};
+
+for (var i = 0; i < f.length; i++) {
+  console.log(f[i]);
+  
+  if (colors.hasOwnProperty(f[i])) {
+    console.log(colors[f[i]]);
+  }
+}
+```
 
 ### Задание 3. level gold
 
@@ -79,6 +110,22 @@ while(d === 0) {
 }
 alert('Затраты на ЗП' + d*k);
 ```
+Отрефакторенный код
+```js
+var d = parseFloat(prompt('Введите количество человек', 0));
+while (isNaN(d) || d <= 0) {
+  d = parseFloat(prompt('Введите количество человек', 0));
+}
+
+var k = parseFloat(prompt('Введите зарплату на человека', 0));
+while (isNaN(k) || k <= 0) {
+  k = parseFloat(prompt('Введите зарплату на человека', 0));
+}
+
+var totalCost = d * k;
+alert('Затраты на ЗП: ' + totalCost);
+```
+
 ### Задание 4
 
 Скрипт проводит анализ имеющихся студентов в массиве.
@@ -111,7 +158,44 @@ ploxieStudenti.forEach((znachenie)=>{console.log('Фио: '+znachenie.FIO+'; О�
 
 ```
 
-### Задание 5
+Отрефакторенный код
+```js
+var klassSoStudentami = [
+  { FIO: 'Петров А.А.', Ocenka: 5 },
+  { FIO: 'Иванов Б.Б.', Ocenka: 3.4 },
+  { FIO: 'Сидоров Г.Г.', Ocenka: 9 },
+  { FIO: 'Немолодой Д.Д', Ocenka: 2 },
+  { FIO: 'Молодой Е.Е', Ocenka: 3.4 }
+];
 
-Необходимо просмотреть свой код из предыдущей лабораторной работе  
-и провести работу над ошибками (если, конечно, ошибки есть)
+var s = 0;
+var kolichectvo = 0;
+var ploxieStudenti = [];
+
+klassSoStudentami.forEach(function(student) {
+  var ocenka = student.Ocenka;
+  
+  if (ocenka < 0 || ocenka > 5) {
+    console.log('Оценка ' + ocenka + ' не учитывается, так как не соответствует допустимым значениям');
+    return;
+  }
+  
+  if (ocenka < 4) {
+    ploxieStudenti.push(student);
+  }
+  
+  s += ocenka;
+  kolichectvo++;
+});
+
+var averageOcenka = s / kolichectvo;
+console.log('Средняя оценка: ' + averageOcenka.toFixed(2));
+console.log('Плохие студенты:');
+if (ploxieStudenti.length === 0) {
+  console.log('Таких нет');
+} else {
+  ploxieStudenti.forEach(function(student) {
+    console.log('ФИО: ' + student.FIO + '; Оценка: ' + student.Ocenka);
+  });
+}
+```
