@@ -1,0 +1,20 @@
+button {
+    padding: 50px 50px;
+    font-size: 36px;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+    border: 3px solid black;
+  }
+  
+  #btn-red {
+    background-color: red;
+  }
+  
+  #btn-green {
+    background-color: green;
+  }
+  
+  #btn-blue {
+    background-color: blue;
+  }

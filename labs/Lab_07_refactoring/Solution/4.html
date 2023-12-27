@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+var klassSoStudentami = [
+  { FIO: 'Петров А.А.', Ocenka: 5 },
+  { FIO: 'Иванов Б.Б.', Ocenka: 3.4 },
+  { FIO: 'Сидоров Г.Г.', Ocenka: 9 },
+  { FIO: 'Немолодой Д.Д', Ocenka: 2 },
+  { FIO: 'Молодой Е.Е', Ocenka: 3.4 }
+];
+
+var s = 0;
+var kolichectvo = 0;
+var ploxieStudenti = [];
+
+klassSoStudentami.forEach(function(student) {
+  var ocenka = student.Ocenka;
+  
+  if (ocenka < 0 || ocenka > 5) {
+    console.log('Оценка ' + ocenka + ' не учитывается, так как не соответствует допустимым значениям');
+    return;
+  }
+  
+  if (ocenka < 4) {
+    ploxieStudenti.push(student);
+  }
+  
+  s += ocenka;
+  kolichectvo++;
+});
+
+var averageOcenka = s / kolichectvo;
+console.log('Средняя оценка: ' + averageOcenka.toFixed(2));
+console.log('Плохие студенты:');
+if (ploxieStudenti.length === 0) {
+  console.log('Таких нет');
+} else {
+  ploxieStudenti.forEach(function(student) {
+    console.log('ФИО: ' + student.FIO + '; Оценка: ' + student.Ocenka);
+  });
+}
+</script>
+</body>
+</html>
