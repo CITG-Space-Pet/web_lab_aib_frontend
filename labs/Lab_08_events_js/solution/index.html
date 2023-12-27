@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="contain">
+      <div class="box__history" id="colorContainer"></div>
+      <div class="main__box">
+        <div class="main__box-left">
+          <div class="box__left-control">
+            <label class="label__inp-one" for="inp_one">red</label>
+            <input
+              class="input_one"
+              name="inp_one"
+              id="first_inp"
+              type="number"
+            />
+            <span id="span_one">Неверно задано значение!</span>
+          </div>
+          <div class="box__left-control">
+            <label class="label__inp-two" for="inp_two">green</label>
+            <input
+              class="input_two"
+              name="inp_two"
+              id="second_inp"
+              type="number"
+            />
+            <span id="span_two">Неверно задано значение!</span>
+          </div>
+          <div class="box__left-control">
+            <label class="label__inp-third" for="inp_third">blue</label>
+            <input
+              class="input_third"
+              name="inp_third"
+              id="third_inp"
+              type="number"
+            />
+            <span id="span_three">Неверно задано значение!</span>
+          </div>
+          <button class="box__left-btn" id="generate__btn">
+            Сгенерировать
+          </button>
+        </div>
+        <div class="main__box-right"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
