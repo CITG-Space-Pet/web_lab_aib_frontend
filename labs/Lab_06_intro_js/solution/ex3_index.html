@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+    let array = [];
+    const array_length = 10;
+
+    for(i = 0; i < array_length; i++)
+    {
+        array[i] = Math.floor(Math.random()* 15);
+    }
+    console.log(array.filter(FindBiggerThen));
+
+    function FindBiggerThen(x)
+    {
+        return x > 0;
+    }
+</script>
+</body>
+</html>

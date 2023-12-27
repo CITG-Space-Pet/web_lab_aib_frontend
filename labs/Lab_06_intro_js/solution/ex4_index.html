@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+    //Задание 1
+    function GetRandomNumber()
+    {
+        return Math.random();
+    }
+    console.log("Рандомное число: " + GetRandomNumber());
+
+    //Задание 2
+    let array = [1, 2, 3, 4, 5, 6];
+    function ArrayMultiplication(array)
+    {   
+        return array.map((item) => {
+            return item * 2
+        });
+    }
+    console.log("Новый массив: " + ArrayMultiplication(array));
+
+    //Задание 3
+    let words_array = ["apple", "banana", "orange", "grape", "watermelon"];
+    let random_word = function() {
+        let index = Math.floor(Math.random() * (words_array.length - 0)) + 0;
+        return words_array[index];
+    }
+    console.log("Рандомное слово: " + random_word())
+</script>
+</body>
+</html>

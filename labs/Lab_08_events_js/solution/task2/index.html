@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square color changer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="color-box">
+        <div>
+            <div>
+                <label for="redInput">Red:</label>
+                <input type="number" id="redInput" min="0" max="255">
+            </div>
+            <div>
+                <label for="greenInput">Green:</label>
+                <input type="number" id="greenInput" min="0" max="255">
+            </div>
+            <div>
+                <label for="blueInput">Blue:</label>
+                <input type="number" id="blueInput" min="0" max="255">
+            </div>
+        </div>
+        <div id="squareColor" class="square"></div>
+    </div>
+    <div class="result-box">
+        <h2>Result:</h2>
+        <div id="colorResult"></div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+.day {
+    width: 250px;
+    height: 125px;
+    border: 1px solid darkgray;
+}
+
+.day:hover {
+    box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+.weekNames th {
+    color: gray;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+.dayContent {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.textContent {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.textContent p, h5{
+    width: 130px;
+    margin: 0px;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.textContent h5 {
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.textContent p {
+    margin-top: 7px;
+}
+
+.dayNum {
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 15px;;
+    color: black;
+    font-weight:600;
+    font-size: 20px;
+}
+
+.desc {
+    color: gray;
+    font-size: 14px;
+}
+
+.time {
+    font-size: 14px;
+}
+
+
+.nav div {
+    display: flex;
+}
+
+
+.selectDate {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.selectDate select{
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+}
+
+.moreTasks {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: 700;
+}
+

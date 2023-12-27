@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Изменение цвета квадрата</title>
+</head>
+<body>
+    <div id="listOfBoxes" class="theListOfColorBoxes">
+       
+    </div>
+    <div class="color-box">
+        <div>
+            <div>
+                <label for="redInput">Red:</label>
+                <input type="number" id="redInput" min="0" max="255">
+            </div>
+            <div>
+                <label for="greenInput">Green:</label>
+                <input type="number" id="greenInput" min="0" max="255">
+            </div>
+            <div>
+                <label for="blueInput">Blue:</label>
+                <input type="number" id="blueInput" min="0" max="255">
+            </div>
+            <button class = "generateButton" onclick = 'addBoxToList()'>Сгенерировать</button>
+        </div>
+        <div id="squareColor" class="square"></div>
+    </div>
+    <div class="result-box">
+        <h2>Результат:</h2>
+        <div id="colorResult"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
