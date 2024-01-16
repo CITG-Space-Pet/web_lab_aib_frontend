@@ -1,0 +1,99 @@
+.content {
+    margin: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content h1 {
+    margin: 0;
+    font-weight: 500;
+
+}
+
+.tasks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    width: 100%;
+}
+
+.descs {
+    margin-top: 20px;
+    text-align: center;
+    width: max-content;
+    border: 3px solid black;
+    width: 100%;
+}
+
+.descs div {
+    font-size: 25px;
+}
+
+.times div {
+    font-size: 25px;
+}
+
+.times {
+    margin-top: 20px;
+    text-align: center;
+    border: 3px solid black;
+    width: 100%;
+}
+
+h2 {
+    font-size:larger;
+    margin: 0px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.delete-btn {
+    color: red;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.addTask {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+  
+  .addTask input {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  
+  .addTask button {
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+
+  .back {
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
+  }

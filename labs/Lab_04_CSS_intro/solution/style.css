@@ -1,0 +1,50 @@
+body{
+    min-width: 850px;
+}
+
+img{
+    width: 210px;
+}
+
+
+h1{
+    font-family: "William", serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 31px;
+    text-transform: uppercase;
+    padding-top: 45px;
+    margin-bottom: 0px;
+}
+
+h2{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 31px;
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+
+h3{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 18px;
+    font-weight: normal;
+    margin: 0;
+}
+
+div{
+    background-color: deepskyblue;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 700px;
+    text-align: left;
+}

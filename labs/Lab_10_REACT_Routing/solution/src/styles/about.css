@@ -1,0 +1,39 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content div{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    backdrop-filter: blur(20px);
+}
+
+.discription {
+    font-size: 25px;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.backToMenu {
+    margin-top: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+}

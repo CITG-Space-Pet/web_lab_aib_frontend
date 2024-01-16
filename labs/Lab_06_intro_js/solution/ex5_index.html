@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+    let obect = {};
+    obect.firstName = 'Ivan';
+    obect.surname = 'Kovalenko';
+    obect.patronymic = 'Sergeevich';
+    obect.birthday = '22.10.2003';
+    obect.hobby = 'programming';
+    obect.group = 'АСБ-3-037';
+
+    obect.get_inform = function () 
+    {
+        let year = this.birthday.substring(6, 10);
+        let age = 2023 - year;
+        let inf = 'FIO: ' + this.surname + ' ' + this.firstName + ' ' + this.patronymic + ' ' + age + ' '  + year + ' hobby - ' + this.hobby;
+        return inf;
+    }
+
+    alert(obect.get_inform());
+
+    let employees = 
+    {
+        '1': 1111,
+        '2': 2222,
+        '3': 3333,
+        '4': 4444,
+        '5': 5555,
+        '6': 6666,
+        '7': 7777,
+        '8': 8888,
+        '9': 9999,
+        '10': 2222,
+    };
+    let general_salary = 0;
+    for (let salary in employees)
+    {
+        general_salary += employees[salary];
+    }
+    console.log("Сумма зарплат всех сотрудников: " + general_salary);
+
+</script>
+</body>
+</html>

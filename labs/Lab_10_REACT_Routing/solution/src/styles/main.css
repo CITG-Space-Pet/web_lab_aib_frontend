@@ -1,0 +1,32 @@
+.mainPage {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+.character {
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 3px;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+}
+
+.title {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-weight: bold;
+}

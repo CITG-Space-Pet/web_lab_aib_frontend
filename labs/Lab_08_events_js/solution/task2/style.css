@@ -1,0 +1,17 @@
+.color-box 
+{
+     display: flex;
+     align-items: center;
+}
+
+.square 
+{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+}
